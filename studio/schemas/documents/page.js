@@ -16,6 +16,11 @@ export default {
         source: 'title',
         maxLength: 96
       }
+    },
+    {
+      name: 'body',
+      type: 'bodyPortableText',
+      title: 'Body'
     }
   ]
 }
