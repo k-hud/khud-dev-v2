@@ -35,7 +35,7 @@ const UsesPage = props => {
     <Layout>
       <SEO title='Uses' />
       <Container>
-        <h1 className={responsiveTitle1}>{data.sanityPage.title}</h1>
+        <h1 className={responsiveTitle1}>{data.sanityPage.title} Test</h1>
         <PortableText
           blocks={data.sanityPage.body}
         />
