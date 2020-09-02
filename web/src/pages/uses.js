@@ -11,12 +11,7 @@ export const query = graphql`
   query UsesPageQuery {
         sanityPage(slug:{current:{eq:"uses"}}) {
           title
-          body {
-            _key
-            _type
-            style
-            list
-          }
+          _rawBody
         }
     }
 `
@@ -35,11 +30,10 @@ const UsesPage = props => {
     <Layout>
       <SEO title='Uses' />
       <Container>
-        <h1 className={responsiveTitle1}>{data.sanityPage.title} Test</h1>
+        <h1 className={responsiveTitle1}> {data.sanityPage.title} </h1>
         <PortableText
-          blocks={data.sanityPage.body}
+          blocks={data.sanityPage._rawBody}
         />
-        <pre>{JSON.stringify(data, null, 2)}</pre>
       </Container>
     </Layout>
   )
