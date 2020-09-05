@@ -10,12 +10,11 @@ const isProd = process.env.NODE_ENV === 'production'
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
         trackingId: 'UA-177348743-1',
         head: true,
-        anonymize: true,
-        respectDNT: true
+        anonymize: true
       }
     },
     'gatsby-plugin-postcss',
