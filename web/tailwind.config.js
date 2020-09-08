@@ -1,11 +1,14 @@
 // tailwind.config.js
 module.exports = {
-  purge: [],
-  theme: {
+  future: [
+   removeDeprecatedGapUtilities: true,
+  ],
+    purge: [],
+    theme: {
     extend: {}
   },
-  variants: {},
-  plugins: [
-    require('@tailwindcss/ui')
+    variants: {},
+    plugins: [
+     require('@tailwindcss/ui')
   ]
 }
